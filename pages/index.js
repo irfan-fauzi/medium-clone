@@ -1,14 +1,20 @@
 import Head from "next/head"
+import {ListMovie} from "../components/"
+import ClientOnly from "../components/ClientOnly"
 
 export default function Home() {
+
   return (
     <div>
       <Head>
         <title>Medium, where good idea find you</title>
-        <meta name="description" content="ilmu pemhetahuan" />
+        <meta name="description" content="list movie" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <p className="navbar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, culpa.</p>
+      <ClientOnly>
+        <ListMovie />
+      </ClientOnly>
+      
     </div>
   )
 }
