@@ -12,3 +12,16 @@ export const LOAD_MOVIES = gql`
 	    }
     }
 `
+export const DETAIL_MOVIES = (id) => {
+   return gql`
+   query {
+    movie(id: ${id}){
+    name,
+    actor {
+        name
+    },
+        genre
+    }
+    }
+    `
+} 
