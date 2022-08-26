@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useQuery } from '@apollo/client'
 import { LOAD_MOVIES } from '../../GraphQL/Queries'
-import Link from 'next/link'
-
 
 const ListMovie = () => {
   const {data, loading, error} = useQuery(LOAD_MOVIES)
@@ -16,10 +14,20 @@ const ListMovie = () => {
   },[data])
  
   if(loading){
-    return <p>loading..</p>
+    return (
+      <div>
+        <div className='h-40'></div>
+        <p className='text-center text-2xl font-bold'>Loading...</p>
+      </div>
+    )
   }
   if(error){
-    return <p>ada kesalahan, silahkan coba muat ulang halaman</p>
+    return (
+      <div>
+        <div className='h-40'></div>
+        <p className='text-center text-2xl font-bold'>ada kesalahan koneksi, silahkan muat ulang halaman</p>
+      </div>
+    )
   }
   if(movies){
   return (
