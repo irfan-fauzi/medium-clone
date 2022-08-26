@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Medium, where good idea find you</title>
+        <title>list movies</title>
         <meta name="description" content="list movie" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
